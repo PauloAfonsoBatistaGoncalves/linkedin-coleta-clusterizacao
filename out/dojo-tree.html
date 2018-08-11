@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+		"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Clustered Contacts</title>
+    <link rel="stylesheet" 
+        href="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/resources/dojo.css">
+    <link rel="stylesheet" 
+        href="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dijit/themes/claro/claro.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js" 
+        type="text/javascript" djConfig="parseOnLoad:true"></script>
+
+	<script language="JavaScript" type="text/javascript">
+		dojo.require("dojo.data.ItemFileReadStore");
+		dojo.require("dijit.Tree");
+		dojo.require("dojo.parser");
+	</script>
+
+    <script language="JavaScript" type="text/javascript">
+        var data = {
+    "label": "name",
+    "items": [
+        {
+            "name": "Consultor (2)",
+            "children": [
+                {
+                    "name": "Gilvan F."
+                },
+                {
+                    "name": "Pedro M."
+                }
+            ]
+        },
+        {
+            "name": "Humanos (2)",
+            "children": [
+                {
+                    "name": "Kriscia M."
+                },
+                {
+                    "name": "Lu\u00edz Henrique G."
+                }
+            ]
+        },
+        {
+            "name": "Chief, Executive, Officer (7)",
+            "children": [
+                {
+                    "name": "Eder B."
+                },
+                {
+                    "name": "Eder B."
+                },
+                {
+                    "name": "Eder B."
+                },
+                {
+                    "name": "Alexandre Augusto A."
+                },
+                {
+                    "name": "Eder B."
+                },
+                {
+                    "name": "Eder B."
+                },
+                {
+                    "name": "Alexandre Augusto A."
+                }
+            ]
+        },
+        {
+            "name": "Analista (13)",
+            "children": [
+                {
+                    "name": "Raphael I."
+                },
+                {
+                    "name": "Marcio A."
+                },
+                {
+                    "name": "Claudio V."
+                },
+                {
+                    "name": "Carlos Augusto A."
+                },
+                {
+                    "name": "Thiago M."
+                },
+                {
+                    "name": "Gabriel F."
+                },
+                {
+                    "name": "Elton F."
+                },
+                {
+                    "name": "Drielle B."
+                },
+                {
+                    "name": "Silvio C."
+                },
+                {
+                    "name": "Lu\u00edz Henrique G."
+                },
+                {
+                    "name": "Yago B."
+                },
+                {
+                    "name": "Isabela B."
+                },
+                {
+                    "name": "Osvaldo A."
+                }
+            ]
+        },
+        {
+            "name": "Analytics (3)",
+            "children": [
+                {
+                    "name": "Henrique C."
+                },
+                {
+                    "name": "Henrique C."
+                },
+                {
+                    "name": "Arthur P.'. de G."
+                }
+            ]
+        },
+        {
+            "name": "BI, Opera\u00e7\u00f5es (2)",
+            "children": [
+                {
+                    "name": "Henrique C."
+                },
+                {
+                    "name": "Henrique C."
+                }
+            ]
+        },
+        {
+            "name": "Engenheiro, de, Software (9)",
+            "children": [
+                {
+                    "name": "Paula B."
+                },
+                {
+                    "name": "Rafael Z."
+                },
+                {
+                    "name": "Felipe L."
+                },
+                {
+                    "name": "Jean C."
+                },
+                {
+                    "name": "Rafael Z."
+                },
+                {
+                    "name": "Felipe L."
+                },
+                {
+                    "name": "Jean C."
+                },
+                {
+                    "name": "Rafael Z."
+                },
+                {
+                    "name": "Jean C."
+                }
+            ]
+        },
+        {
+            "name": "Sistemas (4)",
+            "children": [
+                {
+                    "name": "Raphael I."
+                },
+                {
+                    "name": "Marcio A."
+                },
+                {
+                    "name": "Thiago M."
+                },
+                {
+                    "name": "Silvio C."
+                }
+            ]
+        },
+        {
+            "name": "BI (2)",
+            "children": [
+                {
+                    "name": "Henrique C."
+                },
+                {
+                    "name": "Osvaldo A."
+                }
+            ]
+        },
+        {
+            "name": "Intelligence, Business (2)",
+            "children": [
+                {
+                    "name": "Marcelo S."
+                },
+                {
+                    "name": "Ariel Leon L."
+                }
+            ]
+        }
+    ]
+}; //substituted by Python by XXX
+    </script>
+
+</head>
+<body class="claro">
+	<div dojoType="dojo.data.ItemFileReadStore" jsId="jobsStore"
+		data="data"></div>
+
+	<div dojoType="dijit.Tree" id="mytree" store="jobsStore"
+		label="Clustered Contacts" openOnClick="true">
+	</div>
+</body>
+</html>
